@@ -4,9 +4,15 @@ import VagaCard from '../components/VagaCard.jsx';
 export default function Resultado({ perfil, vagas, onVoltar }) {
   return (
     <div className="resultado">
+      <div className="steps">
+        <span className="step">1. Seu relato</span>
+        <span className="step active">2. Perfil revelado</span>
+        <span className="step">3. Vagas pra você</span>
+      </div>
+
       <h2>Seu perfil reconstruído</h2>
       <p>{perfil.resumo}</p>
-      <p className="nivel">Nível: {perfil.nivel}</p>
+      <span className="nivel">Nível: {perfil.nivel}</span>
 
       <MatrioskaReveal skills={perfil.skills} />
 

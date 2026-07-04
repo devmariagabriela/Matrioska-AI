@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DollTrio from '../components/DollIllustration.jsx';
 
 export default function Home({ onResultado }) {
   const [texto, setTexto] = useState('');
@@ -39,7 +40,22 @@ export default function Home({ onResultado }) {
 
   return (
     <div className="home">
-      <h1>Conta pra gente como é a sua rotina</h1>
+      <div className="hero">
+        <DollTrio />
+        <span className="eyebrow">Matrioska AI · Magalu Cloud</span>
+        <h1>Toda mãe carrega competências que o mercado ainda não viu</h1>
+        <p className="lead">
+          Conta pra gente sua rotina. A IA revela, camada por camada, as habilidades
+          profissionais escondidas nela e te conecta a vagas de verdade.
+        </p>
+      </div>
+
+      <div className="steps">
+        <span className="step active">1. Seu relato</span>
+        <span className="step">2. Perfil revelado</span>
+        <span className="step">3. Vagas pra você</span>
+      </div>
+
       <textarea
         value={texto}
         onChange={e => setTexto(e.target.value)}
